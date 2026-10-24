@@ -26,7 +26,7 @@ Execução em modo headless:
 ```bash
 npx cypress run
 ```
-Confira `package.json`, `cypress.config.js` e os arquivos em `cypress/` para confirmar os scripts e cenários existentes.
+Confira `package.json`, `cypress.config.js` e os arquivos em `cypress/` para confirmar os scripts e cenários existentes. Para gravar execuções no Cypress Cloud, configure a variável de ambiente `CYPRESS_RECORD_KEY` localmente antes de usar `npm run cy:report`; não grave chaves no código nem no repositório.
 
 ## Estrutura do projeto
 ```text
