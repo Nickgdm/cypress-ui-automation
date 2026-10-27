@@ -1,34 +1,71 @@
-# Automação de Testes de UI — Hub de Leitura
+╔══════════════════════════════════════════════════════╗
+║        AUTOMAÇÃO DE TESTES DE UI — HUB DE LEITURA     ║
+╚══════════════════════════════════════════════════════╝
 
-Projeto de automação de interface para a aplicação Hub de Leitura, utilizando Cypress para executar cenários end-to-end.
+Projeto de estudo voltado à automação de testes end-to-end da interface web da aplicação Hub de Leitura, utilizando Cypress.
 
-## Objetivos
+════════════════════════════════════════════════════════
+SOBRE O PROJETO
+════════════════════════════════════════════════════════
+
+O repositório reúne testes automatizados de interface para praticar a validação de fluxos de usuário e o comportamento da aplicação em cenários reproduzíveis.
+
+════════════════════════════════════════════════════════
+OBJETIVOS
+════════════════════════════════════════════════════════
+
 - Automatizar fluxos da interface web.
-- Validar o comportamento da aplicação por meio de cenários reproduzíveis.
-- Praticar organização, configuração e execução de testes de UI.
+- Validar comportamentos da aplicação por meio de cenários reproduzíveis.
+- Praticar a organização, a configuração e a execução de testes de UI.
+- Explorar a possibilidade de integrar a execução dos testes a um pipeline de integração contínua.
 
-## Tecnologias
+════════════════════════════════════════════════════════
+TECNOLOGIAS E FERRAMENTAS
+════════════════════════════════════════════════════════
+
 - JavaScript
 - Node.js e npm
 - Cypress
-- Jenkinsfile para integração contínua (presente no repositório)
+- Jenkinsfile, presente no repositório, como ponto de partida para integração contínua
 
-## Pré-requisitos
+════════════════════════════════════════════════════════
+PRÉ-REQUISITOS
+════════════════════════════════════════════════════════
+
 - Node.js e npm instalados.
 - Aplicação Hub de Leitura em execução e acessível pela URL configurada nos testes.
+- Dependências do projeto instaladas.
 
-## Instalação e execução
+════════════════════════════════════════════════════════
+INSTALAÇÃO E EXECUÇÃO
+════════════════════════════════════════════════════════
+
+Instale as dependências:
+
 ```bash
 npm install
+```
+
+Abra a interface do Cypress:
+
+```bash
 npx cypress open
 ```
-Execução em modo headless:
+
+Execute os testes em modo headless:
+
 ```bash
 npx cypress run
 ```
-Confira `package.json`, `cypress.config.js` e os arquivos em `cypress/` para confirmar os scripts e cenários existentes. Para gravar execuções no Cypress Cloud, configure a variável de ambiente `CYPRESS_RECORD_KEY` localmente antes de usar `npm run cy:report`; não grave chaves no código nem no repositório.
 
-## Estrutura do projeto
+Consulte o arquivo `package.json` para confirmar os scripts disponíveis e verifique `cypress.config.js` e os arquivos de teste em `cypress/` para conhecer a configuração e os cenários implementados.
+
+Se utilizar o Cypress Cloud para registrar execuções, configure a variável de ambiente `CYPRESS_RECORD_KEY` localmente antes de executar o script de relatório correspondente. Não inclua chaves ou credenciais no código nem no repositório.
+
+════════════════════════════════════════════════════════
+ESTRUTURA DO PROJETO
+════════════════════════════════════════════════════════
+
 ```text
 hub-de-leitura-teste-ui/
 ├── .github/
@@ -40,21 +77,46 @@ hub-de-leitura-teste-ui/
 └── README.md
 ```
 
-## Desafios práticos
-Preparar a aplicação alvo, selecionar elementos da interface, executar ações do usuário e validar estados visuais e funcionais sem depender de esperas arbitrárias.
+A estrutura acima representa os principais diretórios e arquivos documentados neste projeto.
 
-## Boas práticas adotadas
-- Organização dos testes em diretório próprio.
-- Configuração do Cypress separada dos cenários.
-- Possibilidade de integrar a execução a um pipeline.
+════════════════════════════════════════════════════════
+DESAFIOS PRÁTICOS
+════════════════════════════════════════════════════════
 
-## 📚 Aprendizados
-A atividade permite praticar automação end-to-end com Cypress, desde a preparação do ambiente e seleção de elementos até a validação dos comportamentos da interface. A presença de um Jenkinsfile também oferece um ponto de partida para integrar testes ao fluxo de CI.
+- Preparar a aplicação utilizada como alvo dos testes.
+- Selecionar elementos da interface de forma adequada.
+- Simular ações realizadas por usuários.
+- Validar estados e comportamentos da interface sem depender de esperas arbitrárias.
+- Considerar como os testes podem ser executados em um fluxo de integração contínua.
 
-## Considerações finais
-A URL da aplicação deve corresponder ao ambiente disponível. Consulte os arquivos de teste para identificar os cenários realmente cobertos e eventuais configurações necessárias.
+════════════════════════════════════════════════════════
+BOAS PRÁTICAS
+════════════════════════════════════════════════════════
 
----
+- Manter os testes organizados em diretório próprio.
+- Separar a configuração do Cypress dos cenários de teste.
+- Consultar a configuração do ambiente antes de executar a suíte.
+- Não armazenar chaves, senhas ou outros segredos no repositório.
+- Confirmar os resultados por meio da execução real dos testes, sem presumir que todos passam.
 
-## 🎓 Formação
-Atividade desenvolvida durante a formação profissionalizante em **Quality Assurance (QA) pela EBAC — Escola Britânica de Artes Criativas e Tecnologia**.
+════════════════════════════════════════════════════════
+APRENDIZADOS
+════════════════════════════════════════════════════════
+
+A atividade permite praticar automação end-to-end com Cypress, desde a preparação do ambiente e a seleção de elementos até a validação dos comportamentos da interface. A presença de um Jenkinsfile também oferece uma oportunidade de estudo sobre a integração de testes a um fluxo de CI.
+
+════════════════════════════════════════════════════════
+CONSIDERAÇÕES FINAIS
+════════════════════════════════════════════════════════
+
+A execução depende da disponibilidade da aplicação Hub de Leitura e da correspondência entre a URL configurada e o ambiente utilizado. Consulte os arquivos de teste para identificar os cenários implementados e eventuais configurações adicionais necessárias.
+
+Este projeto tem finalidade educacional e não representa, por si só, experiência profissional.
+
+════════════════════════════════════════════════════════
+FORMAÇÃO E NATUREZA DA ATIVIDADE
+════════════════════════════════════════════════════════
+
+Este projeto foi desenvolvido como uma **atividade facultativa** no contexto dos estudos de Quality Assurance (QA), durante a formação da EBAC — Escola Britânica de Artes Criativas e Tecnologia. Seu objetivo é praticar e consolidar conhecimentos de automação de testes de interface.
+
+════════════════════════════════════════════════════════
