@@ -3,7 +3,6 @@
 ║                                 AUTOMAÇÃO DE TESTES DE UI — HUB DE LEITURA                              ║
 ╚═════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 </pre>
-
 Projeto de estudo voltado à automação de testes end-to-end da interface web da aplicação Hub de Leitura, utilizando Cypress.
 
 ## SOBRE O PROJETO
